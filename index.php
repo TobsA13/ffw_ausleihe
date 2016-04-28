@@ -7,10 +7,9 @@
  */
 
 session_start();
-if(isset($_SERVER['HTTP_REFERER'])){
-    $_SESSION['ref'] = $_SERVER['HTTP_REFERER'];
-} else {
-    $_SESSION['ref'] = NULL;
+if(!isset($_SESSION["login"]) || $_SESSION["login"] !== true){
+    header('Location: /login.php');
+    exit;
 }
 ?>
 
@@ -21,16 +20,11 @@ if(isset($_SERVER['HTTP_REFERER'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FF Wörnitz Hilfsmittel Öffentlichkeitsarbeit</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-<!-- Sichtbarer Dokumentinhalt im body -->
-<h1>Feuerwehr Wörnitz</h1>
-<h2>Öffentlichkeitsarbeit Hilfsmittel</h2>
-<br><br>
-<img src="img/katalog.bmp">
-<img src="img/formular.bmp">
+<img class="menu-icon" src="img/katalog.jpg">
+<img class="menu-icon" src="img/formular.jpg">
+<img class="menu-icon" src="img/downloads.jpg">
 </body>
 </html>
