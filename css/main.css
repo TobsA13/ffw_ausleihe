@@ -25,3 +25,32 @@ h1, h2{
 .menu-icon{
     padding-bottom: 20px;
 }
+
+#arrow_forward{
+    float:  right;
+    cursor: pointer;
+}
+
+#arrow_backward{
+    float: left;
+    cursor: pointer;
+}
+#count{
+    display: inline;
+    font-size: 3em;
+    vertical-align: middle;
+}
+
+#navigation{
+    text-align: center;
+    height: 64px;
+}
+
+#objects_content{
+    text-align: center;
+    padding-top: 20px;
+}
+
+#object_div{
+    width: 520px;
+}
